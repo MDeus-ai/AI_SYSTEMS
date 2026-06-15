@@ -16,3 +16,9 @@
 ---
 
 ## 📖 Log Entries
+### 📅 2026-06-15 | Phase 1: Tensor Memory Layout
+* **🎯 Goal Today:** Understand memory layouts
+* **✅ Accomplished:** Understood the concept of storages, that tensors are basically stored as a 1D array of numerical data.
+* **🐛 The Struggle (Bug/Math Wall):** What offset actually does in practise
+* **💡 The Fix / Insight:** Understood that an offset is the index in the storage corresponding to the first element in the tensor
+
