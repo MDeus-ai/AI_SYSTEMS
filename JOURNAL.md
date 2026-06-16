@@ -22,3 +22,10 @@
 * **🐛 The Struggle (Bug/Math Wall):** What offset actually does in practise
 * **💡 The Fix / Insight:** Understood that an offset is the index in the storage corresponding to the first element in the tensor
 
+### 📅 2026-06-16 | Phase 1: Tensor Memory Layout
+* **🎯 Goal Today:** Deconstruct Offsets
+* **✅ Accomplished:** Understood that Pytorch does not make a copy of a tensor when ever its derived from another tensor, instead it simply adjusts the metadata (shape, stride and offset) to describe this sub-tensor
+* **🐛 The Struggle (Bug/Math Wall):** None
+* **💡 The Fix / Insight:** Understood that Pytorch does not make a copy of a tensor when ever its derived from another tensor, instead it simply adjusts the metadata (shape, stride and offset) to describe this sub-tensor
+
+
