@@ -28,4 +28,9 @@
 * **🐛 The Struggle (Bug/Math Wall):** None
 * **💡 The Fix / Insight:** Understood that Pytorch does not make a copy of a tensor when ever its derived from another tensor, instead it simply adjusts the metadata (shape, stride and offset) to describe this sub-tensor
 
+### 📅 2026-06-17 | Phase 1: Tensor Memory Layout
+* **🎯 Goal Today:** Understand Contiguity
+* **✅ Accomplished:** Understood that pytorch uses the Row-Major Order to store and read data
+* **🐛 The Struggle (Bug/Math Wall):** None
+* **💡 The Fix / Insight:** Understood that a tensor is contiguous but its transpose is not because of the change in the rules (strides, size) on how pytorch access its contents. Since pytorch accesses data using Row-Major Order, it forces it to jump back and forth in the memory reducing performance
 
