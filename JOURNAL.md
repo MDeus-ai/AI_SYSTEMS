@@ -34,3 +34,8 @@
 * **🐛 The Struggle (Bug/Math Wall):** None
 * **💡 The Fix / Insight:** Understood that a tensor is contiguous but its transpose is not because of the change in the rules (strides, size) on how pytorch access its contents. Since pytorch accesses data using Row-Major Order, it forces it to jump back and forth in the memory reducing performance
 
+### 📅 2026-06-22 | Module 2: Math Operations & Early Measurement Culture
+* **🎯 Goal Today:** Understand how to accurately measure and benchmark tensor execution speed using Python's `timeit` library.
+* **✅ Accomplished:** Learned the mechanics of `timeit` (runs nested loops of `number` and `repeat` trials) and how taking the minimum trial filters out background system noise.
+* **🐛 The Struggle (Bug/Math Wall):** Figuring out how to pass PyTorch operations to a stopwatch function without Python executing the math beforehand
+* **💡 The Fix / Insight:** Used a `lambda` wrapper to delay code execution, turning a finished calculation into a "recipe" that `timeit` can trigger inside its stopwatch. Additionally, realized that CPU operations naturally block and wait, whereas GPU operations require synchronization before stopping the clock to get accurate math timings
