@@ -39,3 +39,9 @@
 * **✅ Accomplished:** Learned the mechanics of `timeit` (runs nested loops of `number` and `repeat` trials) and how taking the minimum trial filters out background system noise.
 * **🐛 The Struggle (Bug/Math Wall):** Figuring out how to pass PyTorch operations to a stopwatch function without Python executing the math beforehand
 * **💡 The Fix / Insight:** Used a `lambda` wrapper to delay code execution, turning a finished calculation into a "recipe" that `timeit` can trigger inside its stopwatch. Additionally, realized that CPU operations naturally block and wait, whereas GPU operations require synchronization before stopping the clock to get accurate math timings
+
+### 📅 2026-06-25 | Module 2: Math Operations & Early Measurement Culture
+* **🎯 Goal Today:** Understand the difference between in-place and out-of-place operations
+* **✅ Accomplished:** Understood the differences in how these operations are carried out in memory
+* **🐛 The Struggle (Bug/Math Wall):** None
+* **💡 The Fix / Insight:** In-place operations end with an underscore(_) in pytorch. they create new blocks of memory to store new results, Out-of-place operations mutate the existing blocks of memory, replacing the new old results with the new ones. This makes them more efficient
