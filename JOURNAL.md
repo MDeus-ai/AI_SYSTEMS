@@ -45,3 +45,9 @@
 * **✅ Accomplished:** Understood the differences in how these operations are carried out in memory
 * **🐛 The Struggle (Bug/Math Wall):** None
 * **💡 The Fix / Insight:** In-place operations end with an underscore(_) in pytorch. they create new blocks of memory to store new results, Out-of-place operations mutate the existing blocks of memory, replacing the new old results with the new ones. This makes them more efficient
+
+### 📅 2026-07-01 | Module 2: Math Operations & Early Measurement Culture
+* **🎯 Goal Today:** Understand the logical rules of Broadcasting and how it functions under the hood in memory.
+* **✅ Accomplished:** Learned how PyTorch aligns dimensions from right to left, prepends size-1 dimensions to the smaller tensor, and checks compatibility to allow broadcasting without data replication.
+* **🐛 The Struggle (Bug/Math Wall):** Confused about why a 1D tensor still has a stride of `1` (or any stride at all) since there is only one dimension.
+* **💡 The Fix / Insight:** Realized that stride is the number of steps in physical memory required to reach the next element *along* a specific dimension, not to *switch* dimensions. This made the zero-stride trick for broadcasting clear: a stride of `(0, 1)` means the row stride is `0`, so the computer simply loops and references the exact same 5 physical memory addresses 5 times to virtually create a `(5, 5)` array without duplicating data in RAM.
