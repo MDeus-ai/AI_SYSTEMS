@@ -11,10 +11,11 @@
 *.gch
 *.pch
 
-# Compiled Dynamic libraries
+# Compiled Dynamic libraries & Python C++ Extensions
 *.so
 *.dylib
 *.dll
+*.pyd
 
 # Fortran module files
 *.mod
@@ -31,6 +32,51 @@
 *.out
 *.app
 
-# Python notebooks
-.ipynb_checkpoints/
+# CMake, Visual Studio & C++ Build Directories
+build/
+out/
+.vs/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+Testing/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.pdb
+*.ilk
+*.iobj
+*.ipdb
+
+# MATLAB Temporary & Autosave Files
+*.asv
+*.mexw64
+*.mexa64
+slprj/
+
+# Python & Virtual Environments
+.venv/
+venv/
 __pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Profiler Traces & Heavy Checkpoints
+*.pt
+*.pth
+*.safetensors
+*.gguf
+*.nsys-rep
+*.ncu-rep
+trace_*.json
+
+# OS Clutter
+desktop.ini
+.DS_Store
+Thumbs.db

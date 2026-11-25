@@ -1,6 +1,7 @@
 # 📔 The Systems Log (Daily Journal)
 
-> **The Rule:** Write in this journal at the end of every coding session. It doesn't matter if I coded for 4 hours or 15 minutes. Document the struggle, and document the victory. 
+> **The Rule:** Write in this journal at the end of every coding session. It doesn't matter if I coded for 4 hours or 15 minutes. Document the struggle, and document the victory.
+> *(Note: Entries from `2026-06-15` to `2026-07-01` marked "Phase 1" correspond to what is now **[Phase 02: PyTorch & JAX Internals](./02_PyTorch_and_JAX_Internals/README.md)** following the full chronological curriculum expansion.)*
 
 ---
 
@@ -44,7 +45,7 @@
 * **🎯 Goal Today:** Understand the difference between in-place and out-of-place operations
 * **✅ Accomplished:** Understood the differences in how these operations are carried out in memory
 * **🐛 The Struggle (Bug/Math Wall):** None
-* **💡 The Fix / Insight:** In-place operations end with an underscore(_) in pytorch. they create new blocks of memory to store new results, Out-of-place operations mutate the existing blocks of memory, replacing the new old results with the new ones. This makes them more efficient
+* **💡 The Fix / Insight:** Out-of-place operations create new blocks of memory to store new results. In-place operations end with an underscore(_) in pytorch. They mutate the existing blocks of memory, replacing the new old results with the new ones. This makes them more efficient compared to Out-of-place operations 
 
 ### 📅 2026-07-01 | Module 2: Math Operations & Early Measurement Culture
 * **🎯 Goal Today:** Understand the logical rules of Broadcasting and how it functions under the hood in memory.

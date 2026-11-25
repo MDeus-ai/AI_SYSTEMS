@@ -1,0 +1,38 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "x64-Release-AVX2",
+      "displayName": "Visual Studio x64 Release (AVX2 Benchmark Mode)",
+      "description": "Optimized C++20 build (/O2 /arch:AVX2) — ALWAYS select this in Visual Studio before benchmarking!",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "ENABLE_ASAN": "OFF"
+      }
+    },
+    {
+      "name": "x64-Debug",
+      "displayName": "Visual Studio x64 Debug (Memory & Disassembly Inspector)",
+      "description": "Unoptimized debug build for stepping through pointers, registers, and IEEE-754 hex memory.",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "ENABLE_ASAN": "OFF"
+      }
+    },
+    {
+      "name": "x64-Debug-ASan",
+      "displayName": "Visual Studio x64 Debug + AddressSanitizer",
+      "description": "Catches out-of-bounds heap/stack memory accesses immediately.",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "ENABLE_ASAN": "ON"
+      }
+    }
+  ]
+}
